@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('.abc').mouseenter(function () {
+               $('.xyz').text("muse enter");
+            })
+            $('.abc').mouseleave(function(){
+                $('.xyz').text("muse leave");
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <h1 class="abc">hello</h1>
+    <h1 class="xyz"></h1>
+</body>
+
+</html>

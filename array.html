@@ -1,0 +1,37 @@
+<script>
+
+names=["ram","shyam","hari","anup"]; 
+
+//document.write(names[names.length-1])
+
+for(i=0;i<names.length;i++)
+{
+  document.write(names[i]);
+}
+document.write("<br>");
+
+names.forEach(function(anup){
+    document.write(anup);
+})
+
+document.write("<br>");
+names.forEach(element => {
+    document.write(element);
+});
+
+document.write("<br>");
+
+i=0;
+while(i<names.length)
+{
+    document.write(names[i]);
+    i++;
+}
+
+document.write("<br>");
+i=0;
+do{
+    document.write(names[i]);
+    i++;
+}while(i<names.length);
+</script>

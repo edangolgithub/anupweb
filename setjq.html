@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            // $("h1").text("this is h one heading");
+            $("h2").html("this is h2 <em>heading</em>");
+            $(".cl").val("this is val ");
+            data = $('h1').text();
+            data += " ho ho  ho  ho";
+            alert(data);
+
+            $('.a').click(function () {
+
+                num = $('#x').val();
+
+                if (num % 2 == 0) {
+                    alert("even");
+                }
+                else {
+                    alert("odd");
+                }
+            })
+
+        })
+
+    </script>
+    <h1>my name is khan</h1>
+    <h2></h2>
+
+
+    <input type="text" placeholder="gfhfghfghf gyhfhy ftygf" class="cl">
+
+    <input type="text" id="x">
+    <button class="a">find</button>
+</body>
+
+</html>

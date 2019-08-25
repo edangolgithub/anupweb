@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function(){
+
+
+            $('.abc').on(
+                'click', function () {
+                    $('.xyz').fadeOut(3000);
+                }
+            )
+            $('.def').click(function () {
+                $('.xyz').fadeIn(1000);
+            })
+
+
+
+
+        })
+
+
+    </script>
+
+</head>
+<body>
+        <button class="abc">hide</button>
+        <button class="def">show</button>
+        <h1 class="xyz"><img src="image/pineapple.jpg" alt=""></h1>
+
+    
+</body>
+</html>
