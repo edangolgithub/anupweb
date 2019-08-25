@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="callajax()">get data</button>
+    <h1 id="x"></h1>
+
+
+    <script>
+    
+        function callajax()
+        {
+            ajax= new XMLHttpRequest();
+    
+            ajax.onreadystatechange= function()
+            {
+                if(ajax.status==200 && ajax.readyState==4)
+                {
+                 document.getElementById("x").innerHTML=ajax.responseText;
+                }
+            }
+            ajax.open("GET","abc.txt");
+            ajax.send();
+        }
+        
+        </script>
+</body>
+</html>

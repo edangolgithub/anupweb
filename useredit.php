@@ -26,6 +26,7 @@ $result= $con->query($sql);
 
 $row=$result->fetch_assoc();
 }
+
 if($_POST)
 {
     $id= $_REQUEST['id'];
