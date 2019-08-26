@@ -12,6 +12,9 @@
     <h1 id="x"></h1>
 
 
+    <input type="text" placeholder="Search Names" name="search" id="z" onkeyup="getintellisence()" >
+    <h3 id="y"></h3>
+
     <script>
     
         function callajax()
@@ -25,9 +28,31 @@
                  document.getElementById("x").innerHTML=ajax.responseText;
                 }
             }
+
             ajax.open("GET","abc.txt");
             ajax.send();
         }
+
+        function getintellisence()
+        {
+            var t=document.getElementById("z").value;
+
+
+            ajax= new XMLHttpRequest();
+    
+            ajax.onreadystatechange= function()
+            {
+                if(ajax.status==200 && ajax.readyState==4)
+                {
+                 document.getElementById("y").innerHTML=ajax.responseText;
+                }
+            }
+
+            ajax.open("GET","ajaxphp.php?name="+t);
+            ajax.send();
+        }
+
+
         
         </script>
 </body>
