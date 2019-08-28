@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script>
+        $(function () {
+
+            $.post("abc.txt", function (d) {
+                $('h1').text(d);
+            })
+            $('.bt').click(function () {
+               val=$('#x').val();
+            
+                $.post("ajaxpost.php", { data: val }, function (data) {
+                    $('h2').html(data);
+                })
+            })
+        })
+    </script>
+</head>
+
+<div class="container jumbotron">
+    <h3 class="display-1 m-2">Make Double</h3>
+    <input type="text" placeholder="Enter a number to Make it DOuble" class="form-control m-3" id="x">
+    <input type="submit" class="m-3 btn btn-success bt">
+    <h2 class="bg-success m-3 p-5"></h2>
+</div>
+
+
+<h1></h1>
+<body>
+</body>
+
+</html>
