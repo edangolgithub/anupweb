@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       /* Set the size of the div element that contains the map */
+      #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+    <script>
+    function validateForm()
+    {
+        if(document.getElementById("x").value=="")
+        {
+            alert("no name");
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    
+    </script>
+  </head>
+  <body>
+
+        <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+            Name: <input type="text" name="fname" id="x">
+            <input type="submit" value="Submit">
+            </form> 
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17916.837030013005!2d-4.075529618023045!3d55.852175451509694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48886a18103ed41d%3A0x87100dd38d59c49e!2sZeni%20Design!5e0!3m2!1sen!2sus!4v1567652830912!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>  </body>
+</html>
